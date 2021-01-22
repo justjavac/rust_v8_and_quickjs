@@ -1,0 +1,29 @@
+[package]
+name = "hello_js"
+version = "1.0.0"
+license = "MIT"
+authors = ["迷渡 <justjavac@gmail.com>"]
+edition = "2018"
+description = "hello js"
+repository = "https://github.com/justjavac/rust_v8_and_quickjs"
+default-run = "hello_v8"
+keywords = ["v8", "quickjs", "js"]
+categories = ["hardware-support"]
+readme = "README.md"
+
+[[bin]]
+name = "hello_v8"
+path = "src/v8.rs"
+
+[[bin]]
+name = "hello_qjs"
+path = "src/qjs.rs"
+
+[dependencies]
+rusty_v8 = "0.16.0"
+quick-js = "0.3.3"
+
+[profile.release]
+codegen-units = 1
+lto = true
+opt-level = 'z' # Optimize for size
