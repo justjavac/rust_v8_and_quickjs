@@ -56,6 +56,10 @@ jobs:
         # the workspace dir to be saved/restored incorrectly.
         run: echo "CARGO_HOME=$(pwd)/.cargo_home" >> $GITHUB_ENV
 
+      - name:  Configure Windows target
+        if: startsWith(matrix.os, 'windows')
+        run: echo "CARGO_BUILD_TARGET=x86_64-pc-windows-gnu" >> $GITHUB_ENV
+
       - name: Cache
         uses: actions/cache@v2
         with:
