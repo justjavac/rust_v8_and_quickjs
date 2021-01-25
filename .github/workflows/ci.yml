@@ -8,7 +8,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [macOS-latest, ubuntu-latest, windows-latest]
+        os: [macOS-latest, ubuntu-latest]
 
       # Always run master branch builds to completion. This allows the cache to
       # stay mostly up-to-date in situations where a single job fails due to
@@ -121,8 +121,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           files: |
-            target/release/hello_qjs-x86_64-pc-windows-msvc.zip
-            target/release/hello_v8-x86_64-pc-windows-msvc.zip
+            # target/release/hello_qjs-x86_64-pc-windows-msvc.zip
+            # target/release/hello_v8-x86_64-pc-windows-msvc.zip
             target/release/hello_qjs-x86_64-unknown-linux-gnu.zip
             target/release/hello_v8-x86_64-unknown-linux-gnu.zip
             target/release/hello_qjs-x86_64-apple-darwin.zip
