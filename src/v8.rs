@@ -12,11 +12,9 @@ fn main() {
   let context = v8::Context::new(scope);
   let scope = &mut v8::ContextScope::new(scope, context);
 
-  let code = v8::String::new(scope, "'Hello' + ' World!'").unwrap();
-  println!("javascript code: {}", code.to_rust_string_lossy(scope));
-
+  let code = v8::String::new(scope, "'Hello World!'").unwrap();
   let script = v8::Script::compile(scope, code, None).unwrap();
   let result = script.run(scope).unwrap();
   let result = result.to_string(scope).unwrap();
-  println!("result: {}", result.to_rust_string_lossy(scope));
+  println!("{}", result.to_rust_string_lossy(scope));
 }
