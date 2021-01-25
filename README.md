@@ -6,12 +6,14 @@
 
 ## Size
 
-| Name               | Size                       |
-|--------------------|----------------------------|
-| quickjs(debug)     | 1.8M                       |
-| v8(debug)          | 38M                        |
-| quickjs(release)   | 1.2M                       |
-| v8(release)        | 20M                        |
+|             | debug     | release   |
+|-------------|----------:|----------:|
+| **quickjs** | 1758728   | 1281104   |
+| **v8**      | 40047648  | 20956816  |
+
+## Chart
+
+![](./chart.png)
 
 ### License
 
