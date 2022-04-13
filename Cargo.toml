@@ -3,7 +3,7 @@ name = "hello_js"
 version = "1.0.0"
 license = "MIT"
 authors = ["迷渡 <justjavac@gmail.com>"]
-edition = "2018"
+edition = "2021"
 description = "hello js"
 repository = "https://github.com/justjavac/rust_v8_and_quickjs"
 default-run = "hello_v8"
@@ -20,8 +20,8 @@ name = "hello_qjs"
 path = "src/qjs.rs"
 
 [dependencies]
-rusty_v8 = "0.16.0"
-quick-js = "0.3.3"
+v8 = "0.41.0"
+quick-js = "0.4.1"
 
 [profile.release]
 codegen-units = 1
